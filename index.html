@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin - Antrian Rumah Sakit</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="dist/storage.js" defer></script>
+  <script src="dist/auth.js" defer></script>
+  <script src="dist/admin.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <strong>Dashboard admin</strong>
+      <span id="identitas"></span>
+      <a href="operator.html">Operator</a>
+      <a href="ambil-antrian.html">Ambil antrean</a>
+      <a href="layar.html">Layar antrean</a>
+      <button id="logoutBtn" type="button">Logout</button>
+    </div>
+
+    <h1>Manajemen antrean</h1>
+
+    <div class="grid">
+
+      <div class="card">
+        <h2>Tambah layanan</h2>
+
+        <form id="jenisForm">
+          <label for="kodeJenis">Kode, satu huruf A-Z</label>
+          <input id="kodeJenis" type="text" maxlength="1" required>
+
+          <label for="namaJenis">Nama layanan</label>
+          <input id="namaJenis" type="text" required>
+
+          <button type="submit">Tambah layanan</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Tiket manual</h2>
+
+        <form id="manualForm">
+          <label for="manualJenis">Layanan aktif</label>
+          <select id="manualJenis" required></select>
+
+          <label for="manualPrioritas">Prioritas</label>
+          <select id="manualPrioritas">
+            <option value="Normal">Normal</option>
+            <option value="Lansia">Lansia</option>
+            <option value="Disabilitas">Disabilitas</option>
+            <option value="VIP">VIP</option>
+          </select>
+
+          <button type="submit">Terbitkan tiket</button>
+        </form>
+
+        <p id="tiketManual" class="nomor"></p>
+      </div>
+
+    </div>
+
+    <p id="adminPesan" class="pesan"></p>
+
+    <div class="card">
+      <h2>Daftar layanan</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Kode</th>
+              <th>Nama</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+
+          <tbody id="jenisBody"></tbody>
+        </table>
+      </div>
+
+      <button id="resetBtn" class="bahaya" type="button">
+        Reset semua antrean
+      </button>
+    </div>
+
+  </div>
+</body>
+</html>
