@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ambil Antrian - Rumah Sakit</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="dist/storage.js" defer></script>
+  <script src="dist/ambil.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <strong>Rumah Sakit</strong>
+      <a href="layar.html">Layar antrean</a>
+      <a href="login.html">Login petugas</a>
+    </div>
+    <h1>Ambil nomor antrean</h1>
+    <div class="grid">
+      <div class="card">
+        <form id="ambilForm">
+          <label for="ambilJenis">Layanan aktif</label>
+          <select id="ambilJenis" required></select>
+          <label for="ambilPrioritas">Prioritas</label>
+          <select id="ambilPrioritas">
+            <option value="Normal">Normal</option>
+            <option value="Lansia">Lansia</option>
+            <option value="Disabilitas">Disabilitas</option>
+            <option value="VIP">VIP</option>
+          </select>
+          <button type="submit">Ambil tiket</button>
+        </form>
+        <p id="ambilPesan" class="pesan"></p>
+      </div>
+      <div class="card">
+        <h2>Tiket Anda</h2>
+        <p id="hasilNomor" class="nomor">-</p>
+        <p id="hasilDetail">Silakan pilih layanan dan prioritas.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
