@@ -1,3 +1,28 @@
-<script src="dist/storage.js" defer></script>
-<script src="dist/auth.js" defer></script>
-<script src="dist/operator.js" defer></script>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operator - Antrian Rumah Sakit</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="dist/storage.js" defer></script>
+  <script src="dist/auth.js" defer></script>
+  <script src="dist/operator.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <strong>Panel operator</strong>
+      <span id="identitas"></span>
+      <a href="index.html">Dashboard admin</a>
+      <a href="ambil-antrian.html">Ambil antrean</a>
+      <a href="layar.html">Layar antrean</a>
+      <button id="logoutBtn" type="button">Logout</button>
+    </div>
+    <h1>Panggil antrean</h1>
+    <p>Kelompok prioritas dipanggil lebih dahulu; sesama kelompok mengikuti urutan tiket.</p>
+    <p id="operatorPesan" class="pesan"></p>
+    <div id="operatorKartu" class="grid"></div>
+  </div>
+</body>
+</html>
