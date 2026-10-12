@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Antrian Rumah Sakit</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="dist/auth.js" defer></script>
+  <script src="dist/login.js" defer></script>
+</head>
+<body>
+  <div class="container login-box">
+    <h1>Login petugas</h1>
+    <p>Masuk menggunakan akun uji DummyJSON.</p>
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input id="username" type="text" required>
+
+      <label for="password">Password</label>
+      <input id="password" type="password" required>
+
+      <button id="loginBtn" type="submit">Masuk</button>
+    </form>
+    <p id="loginPesan" class="pesan"></p>
+    <a href="ambil-antrian.html">Ambil antrean tanpa login</a>
+    <a href="layar.html">Lihat layar antrean</a>
+  </div>
+</body>
+</html>
