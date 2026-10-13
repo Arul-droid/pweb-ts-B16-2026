@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ambil Antrian - Rumah Sakit</title>
   <link rel="stylesheet" href="style.css">
+  <script src="dist/auth.js" defer></script>
   <script src="dist/storage.js" defer></script>
   <script src="dist/ambil.js" defer></script>
 </head>
@@ -12,8 +13,10 @@
   <div class="container">
     <div class="navbar">
       <strong>Rumah Sakit</strong>
+      <span id="identitas"></span>
+      <a href="operator.html">Panel operator</a>
       <a href="layar.html">Layar antrean</a>
-      <a href="login.html">Login petugas</a>
+      <button id="logoutBtn" type="button">Logout</button>
     </div>
     <h1>Ambil nomor antrean</h1>
     <div class="grid">

@@ -1,4 +1,7 @@
 function mulaiAmbil(): void {
+  if (!cekLogin(false)) return;
+  pasangNavigasi();
+
   const form = document.getElementById("ambilForm") as HTMLFormElement;
   const jenis = document.getElementById("ambilJenis") as HTMLSelectElement;
   const prioritas = document.getElementById("ambilPrioritas") as HTMLSelectElement;

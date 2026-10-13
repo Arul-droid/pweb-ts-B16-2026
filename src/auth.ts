@@ -19,7 +19,7 @@ function cekLogin(khususAdmin: boolean): boolean {
   }
 
   if (khususAdmin && role !== "admin" && role !== "moderator") {
-    window.location.href = "login.html";
+    window.location.href = "operator.html";
     return false;
   }
 

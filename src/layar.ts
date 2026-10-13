@@ -1,4 +1,7 @@
 function mulaiLayar(): void {
+  if (!cekLogin(false)) return;
+  pasangNavigasi();
+
   const wadah = document.getElementById("layarKartu") as HTMLDivElement;
   const pesan = document.getElementById("layarPesan") as HTMLParagraphElement;
   const tombol = document.getElementById("fullscreenBtn") as HTMLButtonElement;

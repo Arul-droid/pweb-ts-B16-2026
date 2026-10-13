@@ -1,5 +1,8 @@
 "use strict";
 function mulaiLayar() {
+    if (!cekLogin(false))
+        return;
+    pasangNavigasi();
     const wadah = document.getElementById("layarKartu");
     const pesan = document.getElementById("layarPesan");
     const tombol = document.getElementById("fullscreenBtn");

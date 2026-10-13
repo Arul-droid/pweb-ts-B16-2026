@@ -16,7 +16,7 @@ function cekLogin(khususAdmin) {
         return false;
     }
     if (khususAdmin && role !== "admin" && role !== "moderator") {
-        window.location.href = "login.html";
+        window.location.href = "operator.html";
         return false;
     }
     return true;

@@ -1,5 +1,8 @@
 "use strict";
 function mulaiAmbil() {
+    if (!cekLogin(false))
+        return;
+    pasangNavigasi();
     const form = document.getElementById("ambilForm");
     const jenis = document.getElementById("ambilJenis");
     const prioritas = document.getElementById("ambilPrioritas");
